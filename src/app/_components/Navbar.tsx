@@ -20,7 +20,7 @@ const Navbar: React.FC<Props> = () => {
             <a href="#about">About</a>
           </li>
           <li className="transition-transform duration-300 ease-in-out hover:scale-110">
-            <a href="#simulator">Simulator</a>
+            <a href="#stats">Simulator</a>
           </li>
           <li className="transition-transform duration-300 ease-in-out hover:scale-110">
             <details>

@@ -17,7 +17,7 @@ function LandingPage({}: Props) {
   }, []);
 
   return (
-    <div className="relative h-screen overflow-hidden text-[#6B7280]">
+    <div className="mx-w-7xl relative h-screen overflow-hidden text-[#6B7280]">
       <div className="container mx-auto flex h-screen flex-col space-x-5 p-5 lg:flex-row">
         {/* Left Section */}
         <motion.div
@@ -33,11 +33,11 @@ function LandingPage({}: Props) {
               animate={{ scale: 1 }}
               transition={{ duration: 0.8, ease: "easeInOut" }}
             >
-              <span>
+              <span className="">
                 <img
                   src="./paladin75.PNG"
                   alt=""
-                  className="inline-block w-16"
+                  className="m-2 inline-block h-20 w-20 object-contain pb-2 pr-2"
                 />
               </span>{" "}
               Sim Your Holy Paladin
@@ -97,15 +97,15 @@ function LandingPage({}: Props) {
                 animate={{ opacity: 1, y: -20 }}
                 transition={{ delay: 0.7, duration: 1 }}
               >
-                {damage.toLocaleString()}{" "}
-                <a href="">
-                  <img
-                    src="./spell_holy_holybolt35.PNG"
-                    alt=""
-                    className="inline-block w-10"
-                  />
-                </a>
+                <span className="tabular-nums">{damage.toLocaleString()}</span>
               </motion.p>
+              <a href="">
+                <img
+                  src="./spell_holy_holybolt35.PNG"
+                  alt=""
+                  className="inline-block h-14 w-10 object-contain"
+                />
+              </a>
               <motion.div
                 className="mt-6 flex items-center justify-center space-x-2"
                 initial={{ opacity: 0 }}
@@ -113,7 +113,7 @@ function LandingPage({}: Props) {
                 transition={{ delay: 0.9, duration: 1 }}
               >
                 <img
-                  src="https://www.wowhead.com/images/wow/icons/large/inv_sword_48.jpg"
+                  src="https://www.wowhead.com/images/wow/icons/large/inv_sword_39.jpg"
                   alt="Sword"
                   className="h-12 w-12 transition-transform duration-300 ease-in-out hover:scale-110"
                 />

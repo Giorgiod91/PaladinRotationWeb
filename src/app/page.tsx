@@ -18,10 +18,10 @@ export default async function Home() {
       <section className="h-screen">
         <LandingPage />
       </section>
-      <section id="Stats" className="h-screen">
+      <section id="stats" className="h-screen">
         <AddYourStats />
       </section>
-      <section id="Post" className="h-screen">
+      <section id="about" className="h-screen">
         <About />
       </section>
     </main>

@@ -1,5 +1,7 @@
 "use client";
 import React, { useState } from "react";
+import ShowCode from "./ShowCode";
+import { set } from "zod";
 
 type Props = {};
 
@@ -8,9 +10,11 @@ function AddYourStats({}: Props) {
   const [crit, setCrit] = useState<number>(0);
   const [vers, setVers] = useState<number>(0);
   const [HeroTalent, setHeroTalent] = useState<string>("Herald of the Sun");
+  const [showCode, setShowCode] = useState<boolean>(false);
 
   const handleSubmit = (event: React.FormEvent) => {
     event.preventDefault();
+    setShowCode(true);
   };
 
   return (
@@ -23,7 +27,7 @@ function AddYourStats({}: Props) {
           <div>
             <label
               htmlFor="intellect"
-              className="block text-lg font-semibold text-gray-300"
+              className="block text-lg font-semibold text-black"
             >
               Intellect:
             </label>
@@ -33,13 +37,13 @@ function AddYourStats({}: Props) {
               name="intellect"
               value={intellect}
               onChange={(e) => setIntellect(Number(e.target.value))}
-              className="w-full rounded-lg border border-[#00B8D9] p-2 text-white focus:outline-none focus:ring-2 focus:ring-[#00B8D9]"
+              className="w-full rounded-lg border border-[#00B8D9] p-2 text-black focus:outline-none focus:ring-2 focus:ring-[#00B8D9]"
             />
           </div>
           <div>
             <label
               htmlFor="crit"
-              className="block text-lg font-semibold text-gray-300"
+              className="block text-lg font-semibold text-black"
             >
               Crit:
             </label>
@@ -49,13 +53,13 @@ function AddYourStats({}: Props) {
               name="crit"
               value={crit}
               onChange={(e) => setCrit(Number(e.target.value))}
-              className="w-full rounded-lg border border-[#00B8D9] p-2 text-white focus:outline-none focus:ring-2 focus:ring-[#00B8D9]"
+              className="w-full rounded-lg border border-[#00B8D9] p-2 text-black focus:outline-none focus:ring-2 focus:ring-[#00B8D9]"
             />
           </div>
           <div>
             <label
               htmlFor="vers"
-              className="block text-lg font-semibold text-gray-300"
+              className="block text-lg font-semibold text-black"
             >
               Vers:
             </label>
@@ -65,12 +69,12 @@ function AddYourStats({}: Props) {
               name="vers"
               value={vers}
               onChange={(e) => setVers(Number(e.target.value))}
-              className="w-full rounded-lg border border-[#00B8D9] p-2 text-white focus:outline-none focus:ring-2 focus:ring-[#00B8D9]"
+              className="w-full rounded-lg border border-[#00B8D9] p-2 text-black focus:outline-none focus:ring-2 focus:ring-[#00B8D9]"
             />
           </div>
           <select
             onChange={(e) => setHeroTalent(e.target.value)}
-            className="w-full rounded-lg border border-[#00B8D9] p-2 text-white focus:outline-none focus:ring-2 focus:ring-[#00B8D9]"
+            className="w-full rounded-lg border border-[#00B8D9] p-2 text-black focus:outline-none focus:ring-2 focus:ring-[#00B8D9]"
           >
             <option value="Herald of the Sun">Herald of the Sun</option>
             <option value="Lightsmith">Lightsmith</option>
@@ -86,19 +90,21 @@ function AddYourStats({}: Props) {
         <h2 className="mb-4 text-center text-3xl font-extrabold text-[#00B8D9]">
           Your Stats
         </h2>
-        <p className="text-xl font-semibold text-gray-300">
-          Intellect: <span className="text-white">{intellect}</span>
+        <p className="text-xl font-semibold text-black">
+          Intellect: <span className="text-black">{intellect}</span>
         </p>
-        <p className="text-xl font-semibold text-gray-300">
-          Crit: <span className="text-white">{crit}</span>
+        <p className="text-xl font-semibold text-black">
+          Crit: <span className="text-black">{crit}</span>
         </p>
-        <p className="text-xl font-semibold text-gray-300">
-          Vers: <span className="text-white">{vers}</span>
+        <p className="text-xl font-semibold text-black">
+          Vers: <span className="text-black">{vers}</span>
         </p>
-        <p className="text-xl font-semibold text-gray-300">
-          Talent: <span className="text-white">{HeroTalent}</span>
+        <p className="text-xl font-semibold text-black">
+          Talent: <span className="text-black">{HeroTalent}</span>
         </p>
       </div>
+      {/* ShowCode Component */}
+      {showCode && <ShowCode />}
     </div>
   );
 }
