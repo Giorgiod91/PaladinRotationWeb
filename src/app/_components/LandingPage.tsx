@@ -74,6 +74,7 @@ function LandingPage({}: Props) {
         </motion.div>
 
         {/* Right Section with DPS Simulator */}
+
         <motion.div
           className="relative flex w-full items-center justify-center md:w-1/2"
           initial={{ opacity: 0, scale: 0.8 }}
@@ -101,7 +102,7 @@ function LandingPage({}: Props) {
                   <img
                     src="./spell_holy_holybolt35.PNG"
                     alt=""
-                    className="inline-block w-16"
+                    className="inline-block w-10"
                   />
                 </a>
               </motion.p>
@@ -130,16 +131,6 @@ function LandingPage({}: Props) {
             </div>
           </div>
         </motion.div>
-      </div>
-
-      {/* Starry Background Animation */}
-      <div className="pointer-events-none absolute left-0 top-0 h-full w-full overflow-hidden">
-        <motion.div
-          className="starry-bg"
-          initial={{ opacity: 0 }}
-          animate={{ opacity: 1 }}
-          transition={{ duration: 2 }}
-        />
       </div>
     </div>
   );
