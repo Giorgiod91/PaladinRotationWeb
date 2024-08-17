@@ -5,6 +5,7 @@ import { api, HydrateClient } from "~/trpc/server";
 import LandingPage from "./_components/LandingPage";
 import AddYourStats from "./_components/AddYourStats";
 import Navbar from "./_components/Navbar";
+import About from "./_components/About";
 
 export default async function Home() {
   const hello = await api.post.hello({ text: "from tRPC" });
@@ -19,6 +20,9 @@ export default async function Home() {
       </section>
       <section id="Stats" className="h-screen">
         <AddYourStats />
+      </section>
+      <section id="Post" className="h-screen">
+        <About />
       </section>
     </main>
   );
