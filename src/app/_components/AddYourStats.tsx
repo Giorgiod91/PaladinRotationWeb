@@ -86,7 +86,7 @@ function AddYourStats({}: Props) {
           />
         </form>
       </div>
-      <div className="mt-8">
+      <div className="m-3 mt-8">
         <h2 className="mb-4 text-center text-3xl font-extrabold text-[#00B8D9]">
           Your Stats
         </h2>
@@ -103,8 +103,10 @@ function AddYourStats({}: Props) {
           Talent: <span className="text-black">{HeroTalent}</span>
         </p>
       </div>
-      {/* ShowCode Component */}
-      {showCode && <ShowCode />}
+      <div className="m-3">
+        {/* ShowCode Component */}
+        {showCode && <ShowCode />}
+      </div>
     </div>
   );
 }
