@@ -6,18 +6,18 @@ type Props = {};
 
 function About({}: Props) {
   return (
-    <div className="relative bg-[#1F2937] py-20 text-white">
+    <div className="relative bg-black py-20 text-white">
       <div className="container mx-auto px-5 lg:px-20">
         <motion.h2
-          className="mb-10 text-center text-5xl font-extrabold text-[#00B8D9]"
+          className="mb-10 text-center text-5xl font-extrabold text-[#FF69B4]"
           initial={{ opacity: 0, y: -50 }}
           animate={{ opacity: 1, y: 0 }}
           transition={{ duration: 0.8, ease: "easeInOut" }}
         >
-          About This Project
+          About This Project ✨
         </motion.h2>
         <motion.div
-          className="space-y-6 text-lg leading-relaxed"
+          className="space-y-6 text-lg leading-relaxed text-white"
           initial={{ opacity: 0, x: -100 }}
           animate={{ opacity: 1, x: 0 }}
           transition={{ duration: 0.8, delay: 0.5, ease: "easeInOut" }}

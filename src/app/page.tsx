@@ -6,6 +6,7 @@ import LandingPage from "./_components/LandingPage";
 import AddYourStats from "./_components/AddYourStats";
 import Navbar from "./_components/Navbar";
 import About from "./_components/About";
+import SpotlightEffect from "./_components/SpotlightEffect";
 
 export default async function Home() {
   const hello = await api.post.hello({ text: "from tRPC" });
@@ -13,7 +14,7 @@ export default async function Home() {
   void api.post.getLatest.prefetch();
 
   return (
-    <main className="flex min-h-screen flex-col items-center justify-center bg-[#F4F7FA]">
+    <main className="flex min-h-screen flex-col bg-black">
       <Navbar />
       <section className="h-screen">
         <LandingPage />
