@@ -1,5 +1,6 @@
 # Creating a Single Page App for my HolyPaladin DPS rotation simulator i made in java
-![image](https://github.com/user-attachments/assets/7d83606b-63c2-45cd-ac8e-0bdfee303781)
+![image](https://github.com/user-attachments/assets/3958379d-a6b0-4827-8877-4c2559f72db6)
+
 ![image](https://github.com/user-attachments/assets/540e691e-1652-44bb-8e8e-57d03d21f35c)
 
 
