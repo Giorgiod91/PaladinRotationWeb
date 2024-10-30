@@ -18,7 +18,7 @@ function LandingPage({}: Props) {
   }, []);
 
   return (
-    <div className="mx-auto flex max-w-7xl overflow-hidden text-white accent-pink-400 selection:bg-pink-400/50">
+    <div className="mx-auto flex max-w-7xl overflow-hidden text-gray-300 accent-teal-400 selection:bg-teal-400/50">
       <SpotlightEffect />
       <div className="container mx-auto flex h-screen flex-col space-x-5 p-5 lg:flex-row">
         {/* Left Section */}
@@ -30,7 +30,7 @@ function LandingPage({}: Props) {
         >
           <div className="mb-10 flex w-full flex-col items-center px-4 text-center lg:mb-0 lg:w-full lg:items-start lg:text-left">
             <motion.h1
-              className="mb-4 text-6xl font-extrabold tracking-tight text-white transition-transform duration-500 ease-in-out hover:translate-x-2 sm:text-7xl md:text-8xl"
+              className="mb-4 text-6xl font-extrabold tracking-tight text-gray-300 transition-transform duration-500 ease-in-out hover:translate-x-2 sm:text-7xl md:text-8xl"
               initial={{ scale: 0.8 }}
               animate={{ scale: 1 }}
               transition={{ duration: 0.8, ease: "easeInOut" }}
@@ -45,7 +45,7 @@ function LandingPage({}: Props) {
               Sim Your Holy Paladin
             </motion.h1>
             <motion.p
-              className="mb-8 text-2xl text-white transition-transform duration-300 ease-in-out hover:translate-x-1"
+              className="mb-8 text-2xl text-teal-400 transition-transform duration-300 ease-in-out hover:translate-x-1"
               initial={{ opacity: 0, y: 20 }}
               animate={{ opacity: 1, y: 0 }}
               transition={{ delay: 0.5, duration: 0.8 }}
@@ -53,19 +53,19 @@ function LandingPage({}: Props) {
               "Channel the Light. Test your strength."
             </motion.p>
             <motion.button
-              className="btn btn-wide mb-4 rounded-lg bg-[#FF69B4] px-6 py-2 text-lg font-semibold text-white shadow-lg transition-transform duration-300 ease-in-out hover:scale-110 hover:bg-[#FF1493]"
+              className="btn btn-wide mb-4 rounded-lg bg-teal-400 px-6 py-2 text-lg font-semibold text-gray-800 shadow-lg transition-transform duration-300 ease-in-out hover:scale-110 hover:bg-teal-300"
               whileHover={{
                 scale: 1.1,
-                boxShadow: "0 0 20px rgba(255, 105, 180, 0.8)",
+                boxShadow: "0 0 20px rgba(45, 212, 191, 0.8)",
               }}
               transition={{ duration: 0.3 }}
             >
-              <a href="#Stats" className="text-black no-underline">
+              <a href="#Stats" className="text-gray-800 no-underline">
                 Sim my Char! ⚡
               </a>
             </motion.button>
             <motion.p
-              className="text-sm text-[#FF69B4] transition-transform duration-300 ease-in-out hover:translate-x-1"
+              className="text-sm text-teal-400 transition-transform duration-300 ease-in-out hover:translate-x-1"
               initial={{ opacity: 0 }}
               animate={{ opacity: 1 }}
               transition={{ delay: 1, duration: 0.5 }}
@@ -83,10 +83,10 @@ function LandingPage({}: Props) {
           animate={{ opacity: 1, scale: 1 }}
           transition={{ duration: 1, delay: 0.3 }}
         >
-          <div className="w-full max-w-xs rounded-lg border-4 border-white bg-black p-6 shadow-xl transition-transform duration-300 ease-in-out hover:scale-105 hover:shadow-2xl md:w-auto">
+          <div className="w-full max-w-xs rounded-lg border-4 border-gray-300 p-6 shadow-xl transition-transform duration-300 ease-in-out hover:scale-105 hover:shadow-2xl md:w-auto">
             <div className="mt-8 text-center">
               <motion.h2
-                className="text-4xl font-bold text-white transition-transform duration-300 ease-in-out hover:translate-y-1"
+                className="text-4xl font-bold text-gray-300 transition-transform duration-300 ease-in-out hover:translate-y-1"
                 initial={{ opacity: 0 }}
                 animate={{ opacity: 1 }}
                 transition={{ delay: 0.6, duration: 1 }}
@@ -94,7 +94,7 @@ function LandingPage({}: Props) {
                 Current DPS:
               </motion.h2>
               <motion.p
-                className="mt-4 text-5xl font-extrabold text-[#FF69B4] transition-transform duration-300 ease-in-out hover:translate-y-1"
+                className="mt-4 text-5xl font-extrabold text-teal-400 transition-transform duration-300 ease-in-out hover:translate-y-1"
                 initial={{ opacity: 0 }}
                 animate={{ opacity: 1, y: -20 }}
                 transition={{ delay: 0.7, duration: 1 }}
@@ -131,12 +131,6 @@ function LandingPage({}: Props) {
                 <img
                   src="/hammer.png"
                   alt="Light's Grace"
-                  className="h-12 w-12 transition-transform duration-300 ease-in-out hover:scale-110"
-                />
-                {/* Healing Emoji */}
-                <img
-                  src=""
-                  alt="Healing Spell"
                   className="h-12 w-12 transition-transform duration-300 ease-in-out hover:scale-110"
                 />
               </motion.div>

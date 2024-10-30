@@ -14,7 +14,7 @@ export default async function Home() {
   void api.post.getLatest.prefetch();
 
   return (
-    <main className="flex min-h-screen flex-col bg-black">
+    <main className="flex min-h-screen flex-col">
       <Navbar />
       <section className="h-screen">
         <LandingPage />
