@@ -9,30 +9,30 @@ const Navbar: React.FC<Props> = () => {
       <div className="flex-1">
         <a className="text-3xl font-extrabold text-white transition-transform duration-300 ease-in-out hover:translate-x-2">
           Paladin
-          <span className="text-[#FF69B4]">Sim</span>
+          <span className="text-teal-400">Sim</span>
         </a>
       </div>
       <div className="flex-none">
         <ul className="menu menu-horizontal space-x-4 px-1">
           <li className="transition-transform duration-300 ease-in-out hover:scale-110">
-            <a className="text-white hover:text-[#FF69B4]" href="#home">
+            <a className="text-white hover:text-teal-300" href="#home">
               Home
             </a>
           </li>
           <li className="transition-transform duration-300 ease-in-out hover:scale-110">
-            <a className="text-white hover:text-[#FF69B4]" href="#about">
+            <a className="text-white hover:text-teal-300" href="#about">
               About
             </a>
           </li>
           <li className="transition-transform duration-300 ease-in-out hover:scale-110">
-            <a className="text-white hover:text-[#FF69B4]" href="#stats">
+            <a className="text-white hover:text-teal-300" href="#stats">
               Simulator
             </a>
           </li>
           <li className="transition-transform duration-300 ease-in-out hover:scale-110">
             <details>
-              <summary className="text-[#FF69B4]">More</summary>
-              <ul className="bg-black p-2 text-[#FF69B4]">
+              <summary className="text-teal-400">More</summary>
+              <ul className="bg-black p-2 text-teal-400">
                 <li className="transition-transform duration-300 ease-in-out hover:translate-x-2">
                   <a href="#faq">FAQ</a>
                 </li>

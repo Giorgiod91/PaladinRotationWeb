@@ -1,7 +1,6 @@
 "use client";
 import React, { useState } from "react";
 import ShowCode from "./ShowCode";
-import { set } from "zod";
 import SpotlightEffect from "./SpotlightEffect";
 
 type Props = {};
@@ -19,9 +18,9 @@ function AddYourStats({}: Props) {
   };
 
   return (
-    <div className="mx-auto max-w-md rounded-lg border-4 border-[#FF69B4] bg-black p-6 text-white shadow-lg">
+    <div className="mx-auto max-w-md rounded-lg border-4 border-teal-400 p-6 text-white shadow-lg">
       <SpotlightEffect />
-      <h1 className="mb-8 text-center text-4xl font-bold text-[#FF69B4]">
+      <h1 className="mb-8 text-center text-4xl font-bold text-teal-400">
         Add Your Stats Here! ✨
       </h1>
       <div>
@@ -29,7 +28,7 @@ function AddYourStats({}: Props) {
           <div>
             <label
               htmlFor="intellect"
-              className="block text-lg font-semibold text-[#FF69B4]"
+              className="block text-lg font-semibold text-teal-400"
             >
               Intellect: 📚
             </label>
@@ -39,13 +38,13 @@ function AddYourStats({}: Props) {
               name="intellect"
               value={intellect}
               onChange={(e) => setIntellect(Number(e.target.value))}
-              className="w-full rounded-lg border border-[#FF69B4] bg-gray-800 p-2 text-white focus:outline-none focus:ring-2 focus:ring-[#FF69B4]"
+              className="w-full rounded-lg border border-teal-400 bg-gray-800 p-2 text-white focus:outline-none focus:ring-2 focus:ring-teal-400"
             />
           </div>
           <div>
             <label
               htmlFor="crit"
-              className="block text-lg font-semibold text-[#FF69B4]"
+              className="block text-lg font-semibold text-teal-400"
             >
               Crit: 🎯
             </label>
@@ -55,13 +54,13 @@ function AddYourStats({}: Props) {
               name="crit"
               value={crit}
               onChange={(e) => setCrit(Number(e.target.value))}
-              className="w-full rounded-lg border border-[#FF69B4] bg-gray-800 p-2 text-white focus:outline-none focus:ring-2 focus:ring-[#FF69B4]"
+              className="w-full rounded-lg border border-teal-400 bg-gray-800 p-2 text-white focus:outline-none focus:ring-2 focus:ring-teal-400"
             />
           </div>
           <div>
             <label
               htmlFor="vers"
-              className="block text-lg font-semibold text-[#FF69B4]"
+              className="block text-lg font-semibold text-teal-400"
             >
               Versatility: 🔄
             </label>
@@ -71,13 +70,13 @@ function AddYourStats({}: Props) {
               name="vers"
               value={vers}
               onChange={(e) => setVers(Number(e.target.value))}
-              className="w-full rounded-lg border border-[#FF69B4] bg-gray-800 p-2 text-white focus:outline-none focus:ring-2 focus:ring-[#FF69B4]"
+              className="w-full rounded-lg border border-teal-400 bg-gray-800 p-2 text-white focus:outline-none focus:ring-2 focus:ring-teal-400"
             />
           </div>
           <div>
             <label
               htmlFor="heroTalent"
-              className="block text-lg font-semibold text-[#FF69B4]"
+              className="block text-lg font-semibold text-teal-400"
             >
               Hero Talent: 🌟
             </label>
@@ -85,7 +84,7 @@ function AddYourStats({}: Props) {
               id="heroTalent"
               name="heroTalent"
               onChange={(e) => setHeroTalent(e.target.value)}
-              className="w-full rounded-lg border border-[#FF69B4] bg-gray-800 p-2 text-white focus:outline-none focus:ring-2 focus:ring-[#FF69B4]"
+              className="w-full rounded-lg border border-teal-400 bg-gray-800 p-2 text-white focus:outline-none focus:ring-2 focus:ring-teal-400"
             >
               <option value="Herald of the Sun">Herald of the Sun</option>
               <option value="Lightsmith">Lightsmith</option>
@@ -94,24 +93,24 @@ function AddYourStats({}: Props) {
           <input
             type="submit"
             value="Submit 🚀"
-            className="w-full cursor-pointer rounded-lg bg-gradient-to-r from-[#FF69B4] to-[#FF1493] py-2 text-lg font-semibold text-white shadow-lg transition-all duration-300 hover:from-[#FF1493] hover:to-[#FF69B4]"
+            className="w-full cursor-pointer rounded-lg bg-gradient-to-r from-teal-400 to-teal-300 py-2 text-lg font-semibold text-gray-800 shadow-lg transition-all duration-300 hover:from-teal-300 hover:to-teal-400"
           />
         </form>
       </div>
       <div className="m-3 mt-8">
-        <h2 className="mb-4 text-center text-3xl font-extrabold text-[#FF69B4]">
+        <h2 className="mb-4 text-center text-3xl font-extrabold text-teal-400">
           Your Stats 📊
         </h2>
-        <p className="text-xl font-semibold text-[#FF69B4]">
+        <p className="text-xl font-semibold text-teal-400">
           Intellect: <span className="text-white">{intellect}</span>
         </p>
-        <p className="text-xl font-semibold text-[#FF69B4]">
+        <p className="text-xl font-semibold text-teal-400">
           Crit: <span className="text-white">{crit}</span>
         </p>
-        <p className="text-xl font-semibold text-[#FF69B4]">
+        <p className="text-xl font-semibold text-teal-400">
           Versatility: <span className="text-white">{vers}</span>
         </p>
-        <p className="text-xl font-semibold text-[#FF69B4]">
+        <p className="text-xl font-semibold text-teal-400">
           Talent: <span className="text-white">{HeroTalent}</span>
         </p>
       </div>

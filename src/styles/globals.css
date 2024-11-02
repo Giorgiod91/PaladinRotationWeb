@@ -11,7 +11,7 @@
   mix-blend-mode: multiply;
   background: radial-gradient(
     circle,
-    rgba(255, 105, 180, 0.5) 0%,
+    rgba(94, 234, 212, 0.8) 0%,
     transparent 70%
   );
 }
