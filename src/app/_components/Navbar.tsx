@@ -5,7 +5,7 @@ type Props = {};
 
 const Navbar: React.FC<Props> = () => {
   return (
-    <div className="navbar mx-auto max-w-7xl bg-black shadow-lg">
+    <div className="navbar mx-auto max-w-7xl shadow-lg">
       <div className="flex-1">
         <a className="text-3xl font-extrabold text-white transition-transform duration-300 ease-in-out hover:translate-x-2">
           Paladin

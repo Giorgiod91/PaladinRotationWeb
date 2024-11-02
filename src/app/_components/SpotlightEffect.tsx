@@ -19,12 +19,14 @@ const SpotlightEffect = () => {
     <div
       className="spotlight"
       style={{
-        left: mousePosition.x - 250 + "px",
-        top: mousePosition.y - 140 + "px",
+        left: mousePosition.x - 50 + "px",
+        top: mousePosition.y - 40 + "px",
         width: "200px",
         height: "200px",
       }}
-    ></div>
+    >
+      <img src="./spell_holy_holybolt35.PNG" alt="holypala" />
+    </div>
   );
 };
 
