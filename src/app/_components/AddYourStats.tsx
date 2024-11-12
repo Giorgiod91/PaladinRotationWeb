@@ -5,6 +5,7 @@ import SpotlightEffect from "./SpotlightEffect";
 
 type Props = {};
 
+//::TODO:: showcase the user usage with the counter number from the backend !
 function AddYourStats({}: Props) {
   const [intellect, setIntellect] = useState<number>(0);
   const [crit, setCrit] = useState<number>(0);
@@ -35,6 +36,12 @@ function AddYourStats({}: Props) {
         method: "POST",
         headers: { "Content-Type": "application/json" },
         body: JSON.stringify({ versatility: vers }),
+      });
+
+      await fetch("http://localhost:8080/paladin/setCounter", {
+        method: "POST",
+        headers: { "Content-Type": "application/json" },
+        body: JSON.stringify({}),
       });
 
       console.log("Stats updated successfully!");
