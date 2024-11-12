@@ -16,18 +16,21 @@ function AddYourStats({}: Props) {
     event.preventDefault();
 
     try {
+      // Send mainStat in the request body
       await fetch("http://localhost:8080/paladin/setMainStat", {
         method: "POST",
         headers: { "Content-Type": "application/json" },
         body: JSON.stringify({ mainStat: intellect }),
       });
 
+      // Send crit in the request body
       await fetch("http://localhost:8080/paladin/setCrit", {
         method: "POST",
         headers: { "Content-Type": "application/json" },
         body: JSON.stringify({ crit: crit }),
       });
 
+      // Send versatility in the request body
       await fetch("http://localhost:8080/paladin/setVersatility", {
         method: "POST",
         headers: { "Content-Type": "application/json" },
