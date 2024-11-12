@@ -1,5 +1,5 @@
 "use client";
-import React, { useState } from "react";
+import React, { useEffect, useState } from "react";
 import ShowCode from "./ShowCode";
 import SpotlightEffect from "./SpotlightEffect";
 
@@ -12,6 +12,36 @@ function AddYourStats({}: Props) {
   const [vers, setVers] = useState<number>(0);
   const [HeroTalent, setHeroTalent] = useState<string>("Herald of the Sun");
   const [showCode, setShowCode] = useState<boolean>(false);
+  const [usageCounter, setUsageCounter] = useState<number>(0);
+
+  //::TODO:: check the CounterFetch
+
+  const handleCounterFetch = async () => {
+    try {
+      const response = await fetch(
+        "http://localhost:8080/paladin/usageCounter",
+        {
+          method: "GET",
+          headers: { "Content-Type": "application/json" },
+        },
+      );
+
+      if (response.ok) {
+        const data = await response.json();
+        setUsageCounter(data.counter); // Update the state
+        console.log("Counter fetched successfully:", data.counter);
+      } else {
+        console.error("Error fetching counter:", response.statusText);
+      }
+    } catch (error) {
+      console.error("Error fetching counter:", error);
+    }
+  };
+
+  // Fetch the counter when the component mounts
+  useEffect(() => {
+    handleCounterFetch();
+  }, []);
 
   const handleSubmit = async (event: React.FormEvent) => {
     event.preventDefault();
