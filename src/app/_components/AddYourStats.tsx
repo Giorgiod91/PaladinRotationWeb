@@ -12,9 +12,33 @@ function AddYourStats({}: Props) {
   const [HeroTalent, setHeroTalent] = useState<string>("Herald of the Sun");
   const [showCode, setShowCode] = useState<boolean>(false);
 
-  const handleSubmit = (event: React.FormEvent) => {
+  const handleSubmit = async (event: React.FormEvent) => {
     event.preventDefault();
-    setShowCode(true);
+
+    try {
+      await fetch("http://localhost:8080/paladin/setMainStat", {
+        method: "POST",
+        headers: { "Content-Type": "application/json" },
+        body: JSON.stringify({ mainStat: intellect }),
+      });
+
+      await fetch("http://localhost:8080/paladin/setCrit", {
+        method: "POST",
+        headers: { "Content-Type": "application/json" },
+        body: JSON.stringify({ crit: crit }),
+      });
+
+      await fetch("http://localhost:8080/paladin/setVersatility", {
+        method: "POST",
+        headers: { "Content-Type": "application/json" },
+        body: JSON.stringify({ versatility: vers }),
+      });
+
+      console.log("Stats updated successfully!");
+      setShowCode(true);
+    } catch (error) {
+      console.error("Error updating stats:", error);
+    }
   };
 
   return (
