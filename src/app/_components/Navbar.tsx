@@ -7,7 +7,7 @@ const Navbar: React.FC<Props> = () => {
   return (
     <div className="navbar mx-auto max-w-7xl shadow-lg">
       <div className="flex-1">
-        <a className="text-3xl font-extrabold text-white transition-transform duration-300 ease-in-out hover:translate-x-2">
+        <a className="text-3xl font-extrabold text-gray-300 transition-transform duration-300 ease-in-out hover:translate-x-2">
           Paladin
           <span className="text-teal-400">Sim</span>
         </a>

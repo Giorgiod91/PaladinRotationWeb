@@ -13,6 +13,7 @@ function AddYourStats({}: Props) {
   const [HeroTalent, setHeroTalent] = useState<string>("Herald of the Sun");
   const [showCode, setShowCode] = useState<boolean>(false);
   const [usageCounter, setUsageCounter] = useState<number>(0);
+  const [simulationResult, setSimulationResult] = useState<string>("");
 
   //::TODO:: check the CounterFetch
 
@@ -42,6 +43,23 @@ function AddYourStats({}: Props) {
   useEffect(() => {
     handleCounterFetch();
   }, []);
+
+  //trigger the simulation from  my java backend
+
+  const TrigerSimulationBackend = async () => {
+    const response = await fetch("http://localhost:8080/paladin/simulate", {
+      method: "GET",
+      headers: { "Content-Type": "application/json" },
+    });
+
+    if (response.ok) {
+      const data = await response.text(); // it returns a string so i will use plain text for now
+      setSimulationResult(data);
+      console.log(data);
+    } else {
+      console.log("Error fetching the simulated value");
+    }
+  };
 
   const handleSubmit = async (event: React.FormEvent) => {
     event.preventDefault();
@@ -73,6 +91,9 @@ function AddYourStats({}: Props) {
         headers: { "Content-Type": "application/json" },
         body: JSON.stringify({}),
       });
+
+      // add the simualte here aswell
+      TrigerSimulationBackend();
 
       console.log("Stats updated successfully!");
       setShowCode(true);
@@ -161,6 +182,7 @@ function AddYourStats({}: Props) {
           />
         </form>
       </div>
+
       <div className="m-3 mt-8">
         <h2 className="mb-4 text-center text-3xl font-extrabold text-teal-400">
           Your Stats 📊
