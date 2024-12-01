@@ -6,6 +6,7 @@ import SpotlightEffect from "./SpotlightEffect";
 type Props = {};
 
 //::TODO:: showcase the user usage with the counter number from the backend !
+//::TODO:: create a seperate component to showcase the result from javabackend simualtion http://localhost:8080/paladin/simulate
 function AddYourStats({}: Props) {
   const [intellect, setIntellect] = useState<number>(0);
   const [crit, setCrit] = useState<number>(0);
@@ -53,9 +54,9 @@ function AddYourStats({}: Props) {
     });
 
     if (response.ok) {
-      const data = await response.text(); // it returns a string so i will use plain text for now
-      setSimulationResult(data);
-      console.log(data);
+      const data = await response.json();
+      setSimulationResult(data.result);
+      console.log(data.result);
     } else {
       console.log("Error fetching the simulated value");
     }
